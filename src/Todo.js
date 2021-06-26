@@ -11,10 +11,14 @@ export default function Todo({text,todoArray,setTodoArray,todo,setEditItem,setTe
     const editTodo = () =>{
         setEditItem(todo.id);
         setTextInput(todo.text);
+
         
     }
 
     const complete = () => {
+        // let edit = ;
+        // console.log(edit);
+        (todo.completed===true) ? document.getElementById("edit").disabled = true : document.getElementById("edit").disabled = false;
         let completedTodo = todoArray.map((el) => {
            if (el.id === todo.id)  {
                return{
@@ -34,7 +38,7 @@ export default function Todo({text,todoArray,setTodoArray,todo,setEditItem,setTe
             </div> 
             <div className="buttons">
                 <button onClick={complete} id="check" ><i className="fas fa-check"></i></button>
-                <button onClick={editTodo} id = "edit" ><i className="fas fa-edit "></i></button>
+                <button onClick={editTodo} disabled={todo.completed} id = "edit" className = "edit"><i className="fas fa-edit "></i></button>
                 <button onClick = {deleteTodo} id = "trash"><i className="fas fa-trash"></i></button>
             </div>
         </div>

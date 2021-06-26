@@ -11,17 +11,24 @@ function App() {
   const [status,setStatus] = useState("All");
   const[filterTodo,setFilterTodo] = useState([]);
   const[editItem,setEditItem] = useState("");
+  const[counter,setCounter] = useState(0);
 
 
   function filterTodoList(){
+    let newArray = [];
     if(status === 'Completed'){
-      setFilterTodo(todoArray.filter((item) => item.completed));
+       todoArray.filter((item) => item.completed);
+      setCounter(newArray.length);
+      setFilterTodo(newArray);
     }
     else if(status === "Incomplete"){
-      setFilterTodo(todoArray.filter((item) => !item.completed));
+      newArray = todoArray.filter((item) => !item.completed);
+      setCounter(newArray.length);
+      setFilterTodo(newArray);
     }
     else {
-      document.getElementById("select").value= "All";
+      document.getElementById("select").value= "All"; //to toggle selection to all whenever the user gives input.
+      setCounter(todoArray.length);
       setFilterTodo(todoArray);
     }
   }
@@ -48,6 +55,7 @@ function App() {
         editItem = {editItem}
         setEditItem = {setEditItem}
         setLocalStorage = {setLocalStorage}
+        counter = {counter}
       />
       <List
         todoArray={todoArray}

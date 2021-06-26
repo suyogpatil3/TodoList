@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TodoForm = ({setTextInput,textInput,setStatus,setEditItem, todoArray,setTodoArray,editItem,setLocalStorage}) => {
+const TodoForm = ({setTextInput,textInput,setStatus,setEditItem, todoArray,setTodoArray,editItem,setLocalStorage,counter}) => {
 
  const getInput = (event) => {
     setTextInput(event.target.value);
@@ -46,10 +46,11 @@ const TodoForm = ({setTextInput,textInput,setStatus,setEditItem, todoArray,setTo
             </div>
             <div id="selectTodo">
                 <select name = "todoOptions" id="select" onChange={changeStatus}>
-                    <option id="all" value = "All">All</option>
-                    <option value = "Completed" >Completed</option>
-                    <option value = "Incomplete" >Incomplete</option>
+                    <option id="all" value = "All">All </option>
+                    <option value = "Completed" >Completed </option>
+                    <option value = "Incomplete" >Incomplete </option>
                 </select>
+                <p className = "counter">{counter} items</p>
             </div>
             
         </form>
