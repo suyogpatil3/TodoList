@@ -50,7 +50,7 @@ const TodoForm = ({setTextInput,textInput,setStatus,setEditItem, todoArray,setTo
                     <option value = "Completed" >Completed </option>
                     <option value = "Incomplete" >Incomplete </option>
                 </select>
-                <p className = "counter">{counter} items</p>
+                <p className = "counter">{(counter == 1) ? `1 item` : `${counter} items` }</p>
             </div>
             
         </form>
