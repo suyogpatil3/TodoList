@@ -3,10 +3,8 @@ import './App.css'
 export default function Todo({text,todoArray,setTodoArray,todo,setEditItem,setTextInput,setLocalStorage}) {
     // const [deleteTodo,setDeleteTodo] = useState("");
     const deleteTodo = () => {
-        console.log(todo);
         let afterDeletionArray = todoArray.filter((element) => element.id !== todo.id);
         setTodoArray(afterDeletionArray);
-        console.log(afterDeletionArray);
         setLocalStorage(afterDeletionArray);
     }
 

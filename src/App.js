@@ -7,9 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
   const [textInput,setTextInput] = useState("");
   const saveditems = JSON.parse(localStorage.getItem('todoArray'));
-  // console.log(saveditems);
   const[todoArray,setTodoArray] = useState(saveditems || []);
-    // const[todoArray,setTodoArray] = useState([]);
   const [status,setStatus] = useState("All");
   const[filterTodo,setFilterTodo] = useState([]);
   const[editItem,setEditItem] = useState("");

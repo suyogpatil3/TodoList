@@ -30,7 +30,6 @@ const TodoForm = ({setTextInput,textInput,setStatus,setEditItem, todoArray,setTo
            setTodoArray(newTodoArray);
            setLocalStorage(newTodoArray);
             setTextInput("");
-            console.log(newTodoArray);
         }
       
     }
