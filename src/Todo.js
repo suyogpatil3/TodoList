@@ -42,8 +42,7 @@ export default function Todo({text,todoArray,setTodoArray,todo,setEditItem,setTe
                 <li className="text">{text}</li>
             </div> 
             <div className="buttons">
-                
-                <button onClick={editTodo} disabled={todo.completed} id = "edit" className = {isCompleted ? "editDisabled" : "edit"}><i className="fas fa-edit "></i></button>
+                <button onClick={editTodo} disabled={todo.completed} id = "edit" className ="edit"><i className="fas fa-edit "></i></button>
                 <button onClick = {deleteTodo} id = "trash"><i className="fas fa-trash"></i></button>
             </div>
         </div>
