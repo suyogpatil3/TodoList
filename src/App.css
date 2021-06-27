@@ -6,6 +6,7 @@
 background-blend-mode: overlay, normal, overlay, color-burn, screen, overlay, difference, difference, normal;
 font-family: 'Nunito Sans', sans-serif;
 font-weight: 500;
+/* opacity: 95%; */
 
 }
 #h1{
@@ -83,13 +84,11 @@ input{
   border:0px;
 }
 .todoText{
-  display: inline-flex;
+  display: flex;
+  justify-content: space-between;
   max-width:500px;
   flex-wrap: wrap;
   font-size: 18px;
-  place-items: center;
-  justify-content: center;
-  align-items: center;
 }
 .formInput{
   display: inline-flex;
@@ -143,6 +142,12 @@ select{
     width:300px;
   }
  
+  .text{
+    padding-left:30px;
+    justify-content: center;
+    display:flex;
+    align-items: center;
+  }
   .form{
     width:100vw;
     height: auto;
@@ -196,7 +201,7 @@ button{
   
 }
 
-.edit{
+.edit ,.editDisabled{
   margin-right: 3px;
   width:30px;
   height: 30px;
@@ -204,9 +209,15 @@ button{
   color:rgba(34, 63, 192, 0.897);
   border: 0;
   border-radius: 40px;
+  text-decoration:none;
+}
+.editDisabled:hover{
+  background-color: transparent;
+  color:rgba(34, 63, 192, 0.897);
 }
 
 .edit:hover{
+  text-decoration:none;
   margin-right: 3px;
   background-color:rgb(53, 86, 230) ;
   color:white;
