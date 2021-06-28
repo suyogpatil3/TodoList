@@ -17,7 +17,7 @@ function App() {
   function filterTodoList(){
     let newArray = [];
     if(status === 'Completed'){
-       todoArray.filter((item) => item.completed);
+      newArray = todoArray.filter((item) => item.completed);
       setCounter(newArray.length);
       setFilterTodo(newArray);
     }
